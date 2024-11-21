@@ -1,17 +1,20 @@
-version: '3.8'
+version: '3.9'
+
+networks:
+  backend_network:
+    driver: bridge
 
 services:
   backend:
     build:
       context: .  # Usa la raíz como el contexto
     ports:
-      - "8086:8086"  # Exponer el puerto 8086
+      - "8086:8086"  # Mapeo del puerto 8086
     environment:
       - FLASK_APP=app.py
-      - FLASK_RUN_HOST=0.0.0.0  # Hace que Flask escuche en todas las interfaces
+      - FLASK_RUN_HOST=0.0.0.0
     restart: unless-stopped
     volumes:
-      - .:/app  # Sincroniza los archivos en el contenedor con los de tu máquina
-    network_mode: "host"  # Configura el modo de red como host
-
-# Las redes no son necesarias si usas el modo de red host, así que las podemos eliminar
+      - .:/app
+    networks:
+      - backend_network
