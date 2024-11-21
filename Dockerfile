@@ -14,7 +14,5 @@ COPY . .
 # Expone el puerto que tu aplicación usará
 EXPOSE 8086
 
-# Usamos Gunicorn para correr la aplicación
-CMD ["gunicorn", "-b", "0.0.0.0:8087", "--workers", "1", "--threads", "1", "app:create_app()"]
-
-
+# Usamos el servidor de desarrollo de Flask para ejecutar la aplicación
+CMD ["python", "app.py"]
