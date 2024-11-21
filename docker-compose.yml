@@ -1,9 +1,5 @@
 version: '3.9'
 
-networks:
-  backend-mecate_backend_network:  # Cambié el nombre de la red aquí
-    driver: bridge
-
 services:
   backend:
     build:
@@ -16,5 +12,3 @@ services:
     restart: unless-stopped
     volumes:
       - .:/app
-    networks:
-      - backend-mecate_backend_network  # Cambié el nombre de la red aquí también
