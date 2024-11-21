@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .  # Usa la raíz como el contexto
+    ports:
+      - "8086:8086"  # Exponer el puerto 8086
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_RUN_HOST=0.0.0.0  # Hace que Flask escuche en todas las interfaces
+    restart: unless-stopped
+    volumes:
+      - .:/app  # Sincroniza los archivos en el contenedor con los de tu máquina
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    driver: bridge
