@@ -15,5 +15,6 @@ COPY . .
 EXPOSE 8086
 
 # Usamos Gunicorn para correr la aplicación
-CMD ["gunicorn", "-b", "0.0.0.0:8087", "app:create_app()"]
+CMD ["gunicorn", "-b", "0.0.0.0:8087", "--workers", "1", "--threads", "1", "app:create_app()"]
+
 
