@@ -8,7 +8,8 @@ Este es el backend de la prueba técnica realizada por Ricardo Orlando Castillo 
 
 La documentación de la API puede ser accedida desde el siguiente enlace:
 
-- [Documentación Swagger](http://localhost:5000/api/section1/swagger)
+- [Documentación Swagger](http://localhost:8087/api/section1/swagger)
+- [Documentación Swagger](http://localhost:8087/api/section2/swagger)
 
 ## Endpoints
 
@@ -41,6 +42,33 @@ Obtiene la respuesta más vieja y la más reciente.
 **Método:** `GET`
 
 Obtiene la respuesta con el menor número de vistas como punto adicional.
+
+
+## Endpoints Sección 2
+
+### 1. ¿Cuál es el nombre aeropuerto que ha tenido mayor movimiento durante el año?
+**URL:** `/api/section2/aeropuerto-mayor-movimiento`  
+**Método:** `GET`
+
+Obtiene el nombre del aeropuerto con mayor movimiento durante el año.
+
+### 2. ¿Cuál es el nombre aerolínea que ha realizado mayor número de vuelos durante el año?
+**URL:** `/api/section2/aerolinea-mayor-vuelos`  
+**Método:** `GET`
+
+Obtiene el nombre de la aerolínea que ha realizado el mayor número de vuelos durante el año.
+
+### 3. ¿En qué día se han tenido mayor número de vuelos?
+**URL:** `/api/section2/dia-mayor-vuelos`  
+**Método:** `GET`
+
+Obtiene el día con el mayor número de vuelos durante el año.
+
+### 4. ¿Cuáles son las aerolíneas que tienen más de 2 vuelos por día?
+**URL:** `/api/section2/aerolineas-mas-de-2-vuelos`  
+**Método:** `GET`
+
+Obtiene la lista de aerolíneas que tienen más de 2 vuelos por día.
 
 ## Instalación
 
