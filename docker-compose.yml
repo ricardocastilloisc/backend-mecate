@@ -13,8 +13,8 @@ services:
     volumes:
       - .:/app  # Sincroniza los archivos en el contenedor con los de tu máquina
     networks:
-      - backend_network
+      - host  # Usar la red host de Docker
 
 networks:
   backend_network:
-    driver: bridge
+    external: true  # Esto asegura que la red backend no se cree dentro de este contenedor
