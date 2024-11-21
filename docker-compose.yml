@@ -12,9 +12,6 @@ services:
     restart: unless-stopped
     volumes:
       - .:/app  # Sincroniza los archivos en el contenedor con los de tu máquina
-    networks:
-      - host  # Usar la red host de Docker
+    network_mode: "host"  # Configura el modo de red como host
 
-networks:
-  backend_network:
-    external: true  # Esto asegura que la red backend no se cree dentro de este contenedor
+# Las redes no son necesarias si usas el modo de red host, así que las podemos eliminar
