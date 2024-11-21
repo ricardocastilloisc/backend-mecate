@@ -150,3 +150,21 @@ Para ejecutar las pruebas unitarias:
 
 5. **Prueba para el endpoint `/api/section1/least-viewed`**  
    Verifica que la respuesta con el menor número de vistas (punto adicional) esté correcta.
+
+
+### Descripción de las pruebas Backend - Sección 2
+
+1. **Prueba para el endpoint `/api/section2/aeropuerto-mayor-movimiento`**  
+   Verifica que la respuesta incluya el aeropuerto con el mayor movimiento, incluyendo su nombre y la cantidad de vuelos.
+
+2. **Prueba para el endpoint `/api/section2/aerolinea-mayor-vuelos`**  
+   Verifica que la respuesta incluya la aerolínea con la mayor cantidad de vuelos, incluyendo su nombre y la cantidad de vuelos.
+
+3. **Prueba para el endpoint `/api/section2/dia-mayor-vuelos`**  
+   Verifica que la respuesta incluya el día con la mayor cantidad de vuelos, junto con el número de vuelos en ese día.
+
+4. **Prueba para el endpoint `/api/section2/aerolineas-mas-de-2-vuelos`**  
+   Verifica que la respuesta incluya una lista de aerolíneas que tengan más de 2 vuelos por día.  
+   - La prueba acepta tanto un código de estado 200 (cuando se encuentran aerolíneas) como un código 404 (cuando no se encuentran aerolíneas).  
+   - Si se encuentra al menos una aerolínea, la respuesta será un código 200 con los detalles de la aerolínea, el día y la cantidad de vuelos.  
+   - Si no se encuentran aerolíneas, la respuesta será un código 404 con un mensaje indicando que no se encontraron aerolíneas con más de 2 vuelos por día.
