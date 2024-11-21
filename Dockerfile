@@ -14,5 +14,6 @@ COPY . .
 # Expone el puerto que tu aplicación usará
 EXPOSE 8086
 
-# Comando para ejecutar tu aplicación
-CMD ["python", "app.py"]
+# Usamos Gunicorn para correr la aplicación
+CMD ["gunicorn", "-b", "0.0.0.0:8086", "app:create_app()"]
+
