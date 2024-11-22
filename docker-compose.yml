@@ -5,7 +5,7 @@ services:
     build:
       context: .  # Usa la raíz como el contexto
     ports:
-      - "8087:8087"  # Mapeo del puerto 8086 (expone el puerto 8086 del contenedor al puerto 8086 de la máquina local)
+      - "8087:8087"  # Mapeo del puerto 8087 (expone el puerto 8087 del contenedor al puerto 8087 de la máquina local)
     environment:
       - FLASK_APP=app.py
       - FLASK_RUN_HOST=0.0.0.0  # Asegura que Flask escuche en todas las interfaces de red
