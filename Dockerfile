@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expone el puerto que tu aplicación usará
-EXPOSE 8086
+EXPOSE 8087
 
 # Usamos Gunicorn para correr la aplicación
 CMD ["gunicorn", "-b", "0.0.0.0:8087", "app:create_app()"]
